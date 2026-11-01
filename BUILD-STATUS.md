@@ -39,3 +39,7 @@
 
 - Workspace: `/workspace/competitions/firebase-hybridcopilot/`
 - App: `/workspace/competitions/firebase-hybridcopilot/app/`
+
+## Public repo
+
+https://github.com/er-s-an/hybridcopilot (`main`)
