@@ -1,0 +1,226 @@
+:root {
+  color-scheme: dark;
+  --bg: #0b1020;
+  --panel: #121a2f;
+  --panel-2: #18233d;
+  --border: #2a3a5f;
+  --text: #e8eefc;
+  --muted: #9aadcc;
+  --accent: #6ea8ff;
+  --on-device: #3dd68c;
+  --in-cloud: #7aa2ff;
+  --warn: #f0b429;
+  --danger: #ff6b7a;
+  font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  line-height: 1.45;
+  font-weight: 400;
+  color: var(--text);
+  background: radial-gradient(1200px 600px at 10% -10%, #1a2748 0%, var(--bg) 55%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+header.hero {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+header.hero h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+}
+
+header.hero p {
+  margin: 0;
+  color: #9aadcc;
+  max-width: 52rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.8rem;
+  color: #c9d7f2;
+}
+
+.badge.strong { border-color: #2f6b4a; color: var(--on-device); }
+.badge.weak { border-color: #7a5b1a; color: var(--warn); }
+.badge.offline { border-color: #7a2f3a; color: var(--danger); }
+.badge.mock { border-color: #5a4a1a; color: var(--warn); }
+.badge.live { border-color: #2f6b4a; color: var(--on-device); }
+.badge.source-on { border-color: #2f6b4a; color: var(--on-device); }
+.badge.source-cloud { border-color: #35548a; color: var(--in-cloud); }
+
+.panel {
+  background: color-mix(in srgb, var(--panel) 92%, black);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.panel h2 {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9aadcc;
+}
+
+.controls {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+label.mode {
+  font-size: 0.85rem;
+  color: #9aadcc;
+}
+
+select, textarea, button, .chip {
+  font: inherit;
+}
+
+select {
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.4rem 0.6rem;
+}
+
+textarea {
+  width: 100%;
+  min-height: 96px;
+  resize: vertical;
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem 0.85rem;
+}
+
+textarea:focus, select:focus, button:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent) 70%, white);
+  outline-offset: 1px;
+}
+
+button.primary {
+  background: linear-gradient(180deg, #4f8dff, #2f6adf);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button.primary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+button.ghost {
+  background: transparent;
+  color: #c9d7f2;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.chip {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  color: #c9d7f2;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.meta {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: #9aadcc;
+}
+
+.meta code {
+  color: #d7e4ff;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.8rem;
+}
+
+.answer {
+  white-space: pre-wrap;
+  background: #0d1426;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  min-height: 8rem;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+}
+
+.progress {
+  height: 6px;
+  background: #1a243c;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress > span {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--on-device), var(--accent));
+  transition: width 120ms linear;
+}
+
+footer.note {
+  margin-top: 1.25rem;
+  color: #7f91b3;
+  font-size: 0.82rem;
+}
+
+footer.note a { color: var(--accent); }

@@ -1,0 +1,21 @@
+{
+  "name": "hybridcopilot",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --pretty false",
+    "smoke:network": "node scripts/smoke-network.mjs"
+  },
+  "devDependencies": {
+    "typescript": "~7.0.2",
+    "vite": "^8.3.5"
+  },
+  "dependencies": {
+    "firebase": "^13.1.0"
+  },
+  "description": "HybridCopilot — Firebase AI Logic hybrid field assistant (#BuildHybridAI 2026)"
+}
