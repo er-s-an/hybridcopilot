@@ -41,10 +41,11 @@ app.innerHTML = `
   <header class="hero">
     <h1>HybridCopilot</h1>
     <p>
-      Field assistant for demos and trade-shows with flaky Wi‑Fi.
-      Weak net → on-device; strong net → cloud — same
-      <strong>Firebase AI Logic hybrid inference</strong> stack.
-      Intent in, runnable answer out.
+      Field assistant for booth demos when Wi‑Fi drops.
+      <strong>Firebase AI Logic hybrid inference</strong> picks an
+      <code>InferenceMode</code> from the network (on-device when the link is
+      weak, cloud when it is strong) and labels each answer with
+      <code>inferenceSource</code>.
     </p>
     <div class="badges" id="status-badges"></div>
   </header>
@@ -76,11 +77,11 @@ app.innerHTML = `
   </section>
 
   <footer class="note">
-    Contest: Firebase #BuildHybridAI 2026 · Soft registered Devpost
-    <code>er-s-an</code> · No Submit without user 「交」.
+    Contest: Firebase #BuildHybridAI 2026 · Devpost
+    <code>er-s-an</code> · Do not submit until the owner says so.
     Docs:
     <a href="https://firebase.google.com/docs/ai-logic/hybrid/web/get-started" target="_blank" rel="noreferrer">hybrid Web get-started</a>.
-    Missing Firebase keys → mock provider (still shows routing + source badges).
+    Missing Firebase keys use the mock provider. Routing and source badges still show.
   </footer>
 `;
 
