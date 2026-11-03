@@ -8,7 +8,7 @@
 | Idea | HybridCopilot — network-aware Firebase AI Logic hybrid field assistant |
 | App scaffold | **DONE** (`app/` Vite+TS) — mock + live hybrid clients |
 | Public demo | **LIVE** https://hybridcopilot.vercel.app (mock OK; InferenceMode + inferenceSource badges) |
-| Public repo | https://github.com/er-s-an/hybridcopilot · SHA `8dc661799c555aec11f478f250d01ec70e8253ac` |
+| Public repo | https://github.com/er-s-an/hybridcopilot · SHA `c83ea33e09680fcdfec7b2d82ec1c74a48ce9019` |
 | EN README | **DONE** (demo URL included) |
 | Explainer video | https://review-clips.vercel.app/v/hybridcopilot-explainer · **180s** Remotion continuous HybridDesk |
 | Skills loaded | remotion, remotion-best-practices, remotion-markup, remotion-create (+ remotion-render) |
